@@ -4,6 +4,7 @@ public class Employee {
 
      private int status;
      private int dailywage;
+     private int workhrs;
 
      public int EmployeeStatus(){
             this.status=status;
@@ -14,4 +15,10 @@ public class Employee {
             this.dailywage=dailywage;
             return dailywage;
      }
+
+     public int Employee_workhrs(){
+            this.workhrs=workhrs;
+            return workhrs;
+     }
+
 }
