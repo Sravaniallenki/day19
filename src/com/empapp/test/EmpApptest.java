@@ -10,6 +10,7 @@ import com.empapp.controller.EmpController;
        int workhrs=0;
        int dailywage=0;
        int totalwage=0;
+       int totalhrs=0;
        for(int days=0; days<20; days++){
 
                Employee employee = new Employee();
@@ -34,7 +35,13 @@ import com.empapp.controller.EmpController;
                   totalwage+=empcontroller.EmployeeWage(workhrs);
          }
      }
-      System.out.println("MonthlyWage is: "+ totalwage);
+     if(totalhrs<100)
+        System.out.println("MonthlyWage is: "+ totalwage);
+     else
+         totalwage=2000;
+         System.out.println("MonthlyWage is: "+ totalwage);
+
 }
        
 }
+
