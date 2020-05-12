@@ -11,7 +11,13 @@ import com.empapp.controller.EmpController;
         EmpController empcontroller = new EmpController();
         int status = empcontroller.EmployeeStatus();
         if( status == 1)
+        {
+
           System.out.println("IsPresent");
+          int dailywage = empcontroller.EmployeeWage();
+          System.out.println("dailywage is : "+ dailywage);
+
+        }
         else
           System.out.println("IsAbsent");   
      }
