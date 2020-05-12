@@ -10,18 +10,23 @@ import com.empapp.controller.EmpController;
         Employee employee = new Employee();
         EmpController empcontroller = new EmpController();
         int status = empcontroller.EmployeeStatus();
-        if( status == 1)
+        switch( status )
         {
-
-          System.out.println("IsPresent");
-          int workhrs = empcontroller.Employee_Workhrs();
-          if(workhrs == 8)
-               System.out.println("fulltime is : "+  empcontroller.EmployeeWage(workhrs));
-          else
-               System.out.println("Parttime is : "+  empcontroller.EmployeeWage(workhrs));
-     
-        }
-        else
-          System.out.println("IsAbsent");   
+         case 0:
+                 System.out.println("IsAbsent");
+                 break;
+         case 1:
+                 System.out.println("IsPresent");
+                 int workhrs = empcontroller.Employee_Workhrs();
+                 switch( workhrs )
+                 {
+                   case 8:
+                           System.out.println("fulltime is : "+  empcontroller.EmployeeWage(workhrs));
+                           break;
+                   default:
+                           System.out.println("Parttime is : "+  empcontroller.EmployeeWage(workhrs));
+                 }
+         }
      }
 }
+       
