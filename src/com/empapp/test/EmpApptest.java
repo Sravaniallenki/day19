@@ -14,9 +14,12 @@ import com.empapp.controller.EmpController;
         {
 
           System.out.println("IsPresent");
-          int dailywage = empcontroller.EmployeeWage();
-          System.out.println("dailywage is : "+ dailywage);
-
+          int workhrs = empcontroller.Employee_Workhrs();
+          if(workhrs == 8)
+               System.out.println("fulltime is : "+  empcontroller.EmployeeWage(workhrs));
+          else
+               System.out.println("Parttime is : "+  empcontroller.EmployeeWage(workhrs));
+     
         }
         else
           System.out.println("IsAbsent");   

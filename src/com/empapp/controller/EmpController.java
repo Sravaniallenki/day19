@@ -9,9 +9,15 @@ public class EmpController {
              return status;
         }
 
-        public int EmployeeWage() {
+        public int Employee_Workhrs() {
 
                int dailywage=((int)((Math.random()*10)%8)+1)*20;
+               return dailywage;
+        }
+
+        public int EmployeeWage(int hours){
+
+               int dailywage=hours*20;
                return dailywage;
         }
 }
